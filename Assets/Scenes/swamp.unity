@@ -470,7 +470,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 99304918}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1029480807}
+        m_TargetAssemblyTypeName: Swamp, Assembly-CSharp
+        m_MethodName: Answer
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ular
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &99304918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -725,7 +737,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 637416142}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1029480807}
+        m_TargetAssemblyTypeName: Swamp, Assembly-CSharp
+        m_MethodName: Answer
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: katak
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &637416142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1381,7 +1405,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1017865713}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1029480807}
+        m_TargetAssemblyTypeName: Swamp, Assembly-CSharp
+        m_MethodName: Answer
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: kura
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1017865713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1706,10 +1742,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2098,8 +2134,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -495, y: -139.93}
-  m_SizeDelta: {x: 145.3609, y: 118.42}
+  m_AnchoredPosition: {x: -485, y: -135}
+  m_SizeDelta: {x: 104.8404, y: 81.8208}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1339628386
 MonoBehaviour:
@@ -2144,7 +2180,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1339628387}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1029480807}
+        m_TargetAssemblyTypeName: Swamp, Assembly-CSharp
+        m_MethodName: Answer
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: bebek
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1339628387
 MonoBehaviour:
   m_ObjectHideFlags: 0
