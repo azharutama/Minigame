@@ -9,12 +9,12 @@ public class Savana : MonoBehaviour
     [System.Serializable]
     public class Question
     {
-        public string questionText;  // Teks pertanyaan
-        public string correctAnswer; // Jawaban benar (nama hewan)
+        public AudioClip questionSound;  // Suara pertanyaan
+        public string correctAnswer;     // Jawaban benar (nama hewan)
     }
 
     public List<Question> questions = new List<Question>(); // List pertanyaan
-    public Text questionTextUI; // UI untuk menampilkan pertanyaan
+    public AudioSource questionAudioSource; // AudioSource untuk memainkan suara pertanyaan
     public AudioSource correctSound; // Suara benar
     public AudioSource wrongSound; // Suara salah
     public Text scoreText; // UI untuk menampilkan skor
@@ -22,12 +22,17 @@ public class Savana : MonoBehaviour
     private Question currentQuestion;
     private int score = 0;
     private int questionIndex = 0;
+    private int pointPerQuestion = 0;
 
     void Start()
     {
         if (questions.Count > 0)
         {
             ShuffleQuestions();
+
+            // Hitung nilai per soal secara otomatis agar total jadi 100
+            pointPerQuestion = Mathf.RoundToInt(100f / questions.Count);
+
             DisplayQuestion();
         }
     }
@@ -48,7 +53,9 @@ public class Savana : MonoBehaviour
         if (questionIndex < questions.Count)
         {
             currentQuestion = questions[questionIndex];
-            questionTextUI.text = currentQuestion.questionText;
+            questionAudioSource.loop = false;
+            questionAudioSource.clip = currentQuestion.questionSound;
+            questionAudioSource.Play();
         }
         else
         {
@@ -61,25 +68,19 @@ public class Savana : MonoBehaviour
         if (selectedAnswer == currentQuestion.correctAnswer)
         {
             correctSound.Play();
-            score += 20;
+            score += pointPerQuestion;
             questionIndex++;
             DisplayQuestion();
-          
-            
         }
         else
         {
             wrongSound.Play();
         }
-
-
-       
-
     }
 
     void EndGame()
     {
-        questionTextUI.text = "Game Selesai! Skor: " + score;
+        scoreText.text = "Game Selesai! Skor: " + score;
     }
 
     public void Home()
@@ -87,10 +88,11 @@ public class Savana : MonoBehaviour
         SceneManager.LoadScene("PilihLatar");
     }
 
-     public void farm()
+    public void savana()
     {
-        SceneManager.LoadScene("farm");
+        SceneManager.LoadScene("savana");
     }
+
     public void swamp()
     {
         SceneManager.LoadScene("swamp");
