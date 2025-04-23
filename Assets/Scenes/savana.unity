@@ -445,8 +445,10 @@ MonoBehaviour:
   questions:
   - questionSound: {fileID: 8300000, guid: 53611fc64ee269244a5f6e9fc34dc0e8, type: 3}
     correctAnswer: singa
-  - questionSound: {fileID: 8300000, guid: bde428b86bdacc34a9ffdce2bd1e7e35, type: 3}
+  - questionSound: {fileID: 8300000, guid: 6600f2516a4a6634da101f163f61c546, type: 3}
     correctAnswer: gajah
+  - questionSound: {fileID: 8300000, guid: dc03b7179d30b7b46aeb585899e30e11, type: 3}
+    correctAnswer: kelinci
   questionAudioSource: {fileID: 143359455}
   correctSound: {fileID: 1480892255}
   wrongSound: {fileID: 1833158041}
@@ -2246,7 +2248,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 993df0e777d79384f855ffc1ddf7c285, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1740ce0c78f20e34686e43cfff7c8d94, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

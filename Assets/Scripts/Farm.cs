@@ -81,7 +81,9 @@ public class Farm : MonoBehaviour
     void EndGame()
     {
         scoreText.text = "Game Selesai! Skor: " + score;
+        Invoke("swamp", 2f); // Pindah ke scene savana setelah 2 detik
     }
+
 
     public void Home()
     {
