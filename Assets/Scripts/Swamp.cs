@@ -9,15 +9,18 @@ public class Swamp : MonoBehaviour
     [System.Serializable]
     public class Question
     {
-        public AudioClip questionSound;  // Suara pertanyaan
-        public string correctAnswer;     // Jawaban benar (nama hewan)
+        public AudioClip questionSound;
+        public string correctAnswer;
     }
 
-    public List<Question> questions = new List<Question>(); // List pertanyaan
-    public AudioSource questionAudioSource; // AudioSource untuk memainkan suara pertanyaan
-    public AudioSource correctSound; // Suara benar
-    public AudioSource wrongSound; // Suara salah
-    public Text finalMessageText; // Teks ucapan akhir (ganti dari scoreText)
+    public List<Question> questions = new List<Question>();
+    public AudioSource questionAudioSource;
+    public AudioSource correctSound;
+    public AudioSource wrongSound;
+    public Text finalMessageText;
+
+    public AudioSource buttonAudioSource; // Tambahan: AudioSource untuk tombol
+    public AudioClip buttonClickSound;    // Tambahan: Suara klik tombol
 
     private Question currentQuestion;
     private int score = 0;
@@ -29,11 +32,8 @@ public class Swamp : MonoBehaviour
         if (questions.Count > 0)
         {
             ShuffleQuestions();
-
-            // Hitung nilai per soal secara otomatis agar total jadi 100
             pointPerQuestion = Mathf.RoundToInt(100f / questions.Count);
-
-            StartCoroutine(PlayQuestionWithDelay(1.5f)); // Delay sebelum pertanyaan pertama
+            StartCoroutine(PlayQuestionWithDelay(1.5f));
         }
     }
 
@@ -65,14 +65,14 @@ public class Swamp : MonoBehaviour
 
     public void Answer(string selectedAnswer)
     {
-        questionAudioSource.Stop(); // Hentikan suara pertanyaan saat tombol ditekan
+        questionAudioSource.Stop();
 
         if (selectedAnswer == currentQuestion.correctAnswer)
         {
             correctSound.Play();
             score += pointPerQuestion;
             questionIndex++;
-            StartCoroutine(NextQuestionWithDelay(1.5f)); // Jeda sebelum pertanyaan selanjutnya
+            StartCoroutine(NextQuestionWithDelay(1.5f));
         }
         else
         {
@@ -80,11 +80,9 @@ public class Swamp : MonoBehaviour
         }
     }
 
-
     void EndGame()
     {
         finalMessageText.text = "SELAMAT KAMU BERHASIL!";
-        Invoke("savana", 2f); // Pindah ke scene savana setelah 2 detik
     }
 
     IEnumerator PlayQuestionWithDelay(float delay)
@@ -99,18 +97,30 @@ public class Swamp : MonoBehaviour
         DisplayQuestion();
     }
 
+    // Fungsi tambahan untuk memutar suara klik tombol
+    void PlayClickSound()
+    {
+        if (buttonAudioSource != null && buttonClickSound != null)
+        {
+            buttonAudioSource.PlayOneShot(buttonClickSound);
+        }
+    }
+
     public void Home()
     {
+        PlayClickSound();
         SceneManager.LoadScene("PilihLatar");
     }
 
     public void savana()
     {
+        PlayClickSound();
         SceneManager.LoadScene("savana");
     }
 
     public void swamp()
     {
+        PlayClickSound();
         SceneManager.LoadScene("swamp");
     }
 }
