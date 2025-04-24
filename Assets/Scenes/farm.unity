@@ -244,7 +244,7 @@ MonoBehaviour:
   questionAudioSource: {fileID: 270277559}
   correctSound: {fileID: 2026062461}
   wrongSound: {fileID: 1280475313}
-  scoreText: {fileID: 2135572990}
+  finalMessageText: {fileID: 2135572990}
 --- !u!82 &270277559
 AudioSource:
   m_ObjectHideFlags: 0

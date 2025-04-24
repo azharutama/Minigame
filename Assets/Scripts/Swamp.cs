@@ -17,7 +17,7 @@ public class Swamp : MonoBehaviour
     public AudioSource questionAudioSource; // AudioSource untuk memainkan suara pertanyaan
     public AudioSource correctSound; // Suara benar
     public AudioSource wrongSound; // Suara salah
-    public Text scoreText; // UI untuk menampilkan skor
+    public Text finalMessageText; // Teks ucapan akhir (ganti dari scoreText)
 
     private Question currentQuestion;
     private int score = 0;
@@ -33,7 +33,7 @@ public class Swamp : MonoBehaviour
             // Hitung nilai per soal secara otomatis agar total jadi 100
             pointPerQuestion = Mathf.RoundToInt(100f / questions.Count);
 
-            DisplayQuestion();
+            StartCoroutine(PlayQuestionWithDelay(1.5f)); // Delay sebelum pertanyaan pertama
         }
     }
 
@@ -65,12 +65,14 @@ public class Swamp : MonoBehaviour
 
     public void Answer(string selectedAnswer)
     {
+        questionAudioSource.Stop(); // Hentikan suara pertanyaan saat tombol ditekan
+
         if (selectedAnswer == currentQuestion.correctAnswer)
         {
             correctSound.Play();
             score += pointPerQuestion;
             questionIndex++;
-            DisplayQuestion();
+            StartCoroutine(NextQuestionWithDelay(1.5f)); // Jeda sebelum pertanyaan selanjutnya
         }
         else
         {
@@ -78,11 +80,24 @@ public class Swamp : MonoBehaviour
         }
     }
 
-   void EndGame()
-{
-    scoreText.text = "Game Selesai! Skor: " + score;
-    Invoke("savana", 2f); // Pindah ke scene savana setelah 2 detik
-}
+
+    void EndGame()
+    {
+        finalMessageText.text = "SELAMAT KAMU BERHASIL!";
+        Invoke("savana", 2f); // Pindah ke scene savana setelah 2 detik
+    }
+
+    IEnumerator PlayQuestionWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        DisplayQuestion();
+    }
+
+    IEnumerator NextQuestionWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        DisplayQuestion();
+    }
 
     public void Home()
     {

@@ -1179,7 +1179,7 @@ MonoBehaviour:
   questionAudioSource: {fileID: 1029480808}
   correctSound: {fileID: 4413842}
   wrongSound: {fileID: 1618618029}
-  scoreText: {fileID: 1029949252}
+  finalMessageText: {fileID: 1029949252}
 --- !u!82 &1029480808
 AudioSource:
   m_ObjectHideFlags: 0

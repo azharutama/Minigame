@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/swamp.unity
     guid: b47dfb338ea846241bbf4d0c41db4b19
+  - enabled: 1
+    path: Assets/Scenes/credit.unity
+    guid: 0bc514496adb65842989e48d17e8a9f3
   m_configObjects: {}
