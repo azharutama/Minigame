@@ -242,8 +242,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questions:
-  - questionSound: {fileID: 0}
-    correctAnswer: 
+  - questionSound: {fileID: 8300000, guid: bde428b86bdacc34a9ffdce2bd1e7e35, type: 3}
+    correctAnswer: sapi
   questionAudioSource: {fileID: 270277559}
   correctSound: {fileID: 2026062461}
   wrongSound: {fileID: 1280475313}
