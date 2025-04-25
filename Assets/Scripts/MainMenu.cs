@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator LoadSceneWithDelay(string sceneName)
     {
-        yield return new WaitForSeconds(0.2f); // Delay 1 detik
+        yield return new WaitForSeconds(0.2f); 
         SceneManager.LoadScene(sceneName);
     }
 }

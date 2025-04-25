@@ -19,10 +19,7 @@ public class Savana : MonoBehaviour
     public AudioSource wrongSound;
     public Text finalMessageText;
 
-    // Hapus variabel sound click
-    // public AudioSource buttonAudioSource;
-    // public AudioClip buttonClickSound;
-
+   
     private Question currentQuestion;
     private int score = 0;
     private int questionIndex = 0;
@@ -99,20 +96,11 @@ public class Savana : MonoBehaviour
         DisplayQuestion();
     }
 
-    // Hapus fungsi PlayClickSound karena tidak digunakan lagi
-    /*
-    void PlayClickSound()
-    {
-        if (buttonAudioSource != null && buttonClickSound != null)
-        {
-            buttonAudioSource.PlayOneShot(buttonClickSound);
-        }
-    }
-    */
+    
 
     public void Home()
     {
-        // Tidak perlu PlayClickSound
+       
         SceneManager.LoadScene("PilihLatar");
     }
 
