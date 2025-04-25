@@ -5,44 +5,34 @@ using UnityEngine.SceneManagement;
 
 public class pilihLatar : MonoBehaviour
 {
-    public AudioSource audioSource; // AudioSource dari GameObject
-    public AudioClip buttonClickSound; // Suara klik tombol
-
-    void PlayClickSound()
-    {
-        if (audioSource != null && buttonClickSound != null)
-        {
-            audioSource.PlayOneShot(buttonClickSound);
-        }
-    }
-
     public void savana()
     {
-        PlayClickSound();
-        SceneManager.LoadScene("savana");
+        StartCoroutine(LoadSceneWithDelay("savana"));
     }
 
     public void farm()
     {
-        PlayClickSound();
-        SceneManager.LoadScene("farm");
+        StartCoroutine(LoadSceneWithDelay("farm"));
     }
 
     public void swamp()
     {
-        PlayClickSound();
-        SceneManager.LoadScene("swamp");
+        StartCoroutine(LoadSceneWithDelay("swamp"));
     }
 
     public void credit()
     {
-        PlayClickSound();
-        SceneManager.LoadScene("credit");
+        StartCoroutine(LoadSceneWithDelay("credit"));
     }
 
     public void home()
     {
-        PlayClickSound();
-        SceneManager.LoadScene("MainMenu");
+        StartCoroutine(LoadSceneWithDelay("MainMenu"));
+    }
+
+    IEnumerator LoadSceneWithDelay(string sceneName)
+    {
+        yield return new WaitForSeconds(0.2f); // Delay 1 detik
+        SceneManager.LoadScene(sceneName);
     }
 }

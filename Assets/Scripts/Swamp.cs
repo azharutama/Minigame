@@ -19,8 +19,9 @@ public class Swamp : MonoBehaviour
     public AudioSource wrongSound;
     public Text finalMessageText;
 
-    public AudioSource buttonAudioSource; // Tambahan: AudioSource untuk tombol
-    public AudioClip buttonClickSound;    // Tambahan: Suara klik tombol
+    // Hapus variabel sound click
+    // public AudioSource buttonAudioSource;
+    // public AudioClip buttonClickSound;
 
     private Question currentQuestion;
     private int score = 0;
@@ -33,7 +34,7 @@ public class Swamp : MonoBehaviour
         {
             ShuffleQuestions();
             pointPerQuestion = Mathf.RoundToInt(100f / questions.Count);
-            StartCoroutine(PlayQuestionWithDelay(1.5f));
+            StartCoroutine(PlayQuestionWithDelay(2.5f));
         }
     }
 
@@ -83,6 +84,7 @@ public class Swamp : MonoBehaviour
     void EndGame()
     {
         finalMessageText.text = "SELAMAT KAMU BERHASIL!";
+        Invoke("savana", 2f);
     }
 
     IEnumerator PlayQuestionWithDelay(float delay)
@@ -97,7 +99,8 @@ public class Swamp : MonoBehaviour
         DisplayQuestion();
     }
 
-    // Fungsi tambahan untuk memutar suara klik tombol
+    // Hapus fungsi PlayClickSound karena tidak digunakan lagi
+    /*
     void PlayClickSound()
     {
         if (buttonAudioSource != null && buttonClickSound != null)
@@ -105,22 +108,21 @@ public class Swamp : MonoBehaviour
             buttonAudioSource.PlayOneShot(buttonClickSound);
         }
     }
+    */
 
     public void Home()
     {
-        PlayClickSound();
+        // Tidak perlu PlayClickSound
         SceneManager.LoadScene("PilihLatar");
     }
 
     public void savana()
     {
-        PlayClickSound();
         SceneManager.LoadScene("savana");
     }
 
     public void swamp()
     {
-        PlayClickSound();
         SceneManager.LoadScene("swamp");
     }
 }
