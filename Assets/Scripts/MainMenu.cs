@@ -10,6 +10,16 @@ public class MainMenu : MonoBehaviour
     {
         StartCoroutine(LoadSceneWithDelay("PilihLatar"));
     }
+    public void Farm ()
+    {
+        StartCoroutine(LoadSceneWithDelay("farm"));
+    }
+
+     public void Credit()
+    {
+        StartCoroutine(LoadSceneWithDelay("credit"));
+    }
+
 
     public void Quit()
     {

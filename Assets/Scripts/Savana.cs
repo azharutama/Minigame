@@ -97,7 +97,7 @@ public class Savana : MonoBehaviour
     public void LoadHome()
     {
 
-        SceneManager.LoadScene("PilihLatar");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void LoadSavana()
