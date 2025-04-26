@@ -13,24 +13,21 @@ public class Savana : MonoBehaviour
         public string correctAnswer;
     }
 
-    public List<Question> questions = new List<Question>();
+    public List<Question> questions;
     public AudioSource questionAudioSource;
     public AudioSource correctSound;
     public AudioSource wrongSound;
     public Text finalMessageText;
 
-   
+
     private Question currentQuestion;
-    private int score = 0;
     private int questionIndex = 0;
-    private int pointPerQuestion = 0;
 
     void Start()
     {
         if (questions.Count > 0)
         {
             ShuffleQuestions();
-            pointPerQuestion = Mathf.RoundToInt(100f / questions.Count);
             StartCoroutine(PlayQuestionWithDelay(2.5f));
         }
     }
@@ -68,7 +65,6 @@ public class Savana : MonoBehaviour
         if (selectedAnswer == currentQuestion.correctAnswer)
         {
             correctSound.Play();
-            score += pointPerQuestion;
             questionIndex++;
             StartCoroutine(NextQuestionWithDelay(1.5f));
         }
@@ -81,7 +77,7 @@ public class Savana : MonoBehaviour
     void EndGame()
     {
         finalMessageText.text = "SELAMAT KAMU BERHASIL!";
-        Invoke("Home", 2f);
+        Invoke(nameof(LoadHome), 2f);
     }
 
     IEnumerator PlayQuestionWithDelay(float delay)
@@ -96,20 +92,20 @@ public class Savana : MonoBehaviour
         DisplayQuestion();
     }
 
-    
 
-    public void Home()
+
+    public void LoadHome()
     {
-       
+
         SceneManager.LoadScene("PilihLatar");
     }
 
-    public void savana()
+    public void LoadSavana()
     {
         SceneManager.LoadScene("savana");
     }
 
-    public void swamp()
+    public void LoadSwamp()
     {
         SceneManager.LoadScene("swamp");
     }

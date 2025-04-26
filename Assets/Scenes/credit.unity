@@ -206,8 +206,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1958443057}
-        m_TargetAssemblyTypeName: pilihLatar, Assembly-CSharp
-        m_MethodName: home
+        m_TargetAssemblyTypeName: PilihLatar, Assembly-CSharp
+        m_MethodName: LoadHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -902,8 +902,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9508d20986d28074f9df2648fff7551d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  buttonClickSound: {fileID: 8300000, guid: 07e1c2d4b7835f34bbd22e2523a11c23, type: 3}
 --- !u!114 &1958443058
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,21 +6,21 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
-      public void pilihLatar()
+    public void PilihLatar()
     {
         StartCoroutine(LoadSceneWithDelay("PilihLatar"));
     }
 
-    public void quit()
+    public void Quit()
     {
         Application.Quit();
     }
-    
- 
+
+
 
     IEnumerator LoadSceneWithDelay(string sceneName)
     {
-        yield return new WaitForSeconds(0.2f); 
+        yield return new WaitForSeconds(0.2f);
         SceneManager.LoadScene(sceneName);
     }
 }

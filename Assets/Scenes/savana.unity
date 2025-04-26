@@ -444,12 +444,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questions:
-  - questionSound: {fileID: 8300000, guid: 53611fc64ee269244a5f6e9fc34dc0e8, type: 3}
+  - questionSound: {fileID: 8300000, guid: 8c814e95b80a94a0b880f1f81ef481e4, type: 3}
     correctAnswer: singa
-  - questionSound: {fileID: 8300000, guid: 6600f2516a4a6634da101f163f61c546, type: 3}
+  - questionSound: {fileID: 8300000, guid: 2be32455e2ebe4919aeb08a05b6b64e4, type: 3}
     correctAnswer: gajah
-  - questionSound: {fileID: 8300000, guid: dc03b7179d30b7b46aeb585899e30e11, type: 3}
+  - questionSound: {fileID: 8300000, guid: ab218266571334ebdb3230a4e7c6d452, type: 3}
     correctAnswer: kelinci
+  - questionSound: {fileID: 8300000, guid: 79ace81f08fc649b5b62843176191f4c, type: 3}
+    correctAnswer: elang
+  - questionSound: {fileID: 8300000, guid: 50c5acb14c0eb4e90aa33c2ca4556eae, type: 3}
+    correctAnswer: zebra
   questionAudioSource: {fileID: 143359455}
   correctSound: {fileID: 1480892255}
   wrongSound: {fileID: 1833158041}
@@ -1242,7 +1246,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 143359454}
         m_TargetAssemblyTypeName: Savana, Assembly-CSharp
-        m_MethodName: Home
+        m_MethodName: LoadHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

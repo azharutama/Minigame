@@ -384,7 +384,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4753ec95698c93c40af3dfc649531ace, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3fff83237e98ca34f8216b95b41136d4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -649,7 +649,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 240409339}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: pilihLatar
+        m_MethodName: PilihLatar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

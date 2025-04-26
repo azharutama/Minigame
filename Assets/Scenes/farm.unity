@@ -242,8 +242,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questions:
-  - questionSound: {fileID: 8300000, guid: bde428b86bdacc34a9ffdce2bd1e7e35, type: 3}
+  - questionSound: {fileID: 8300000, guid: 7d24b614560154d4db3b6fa4db11232c, type: 3}
     correctAnswer: sapi
+  - questionSound: {fileID: 8300000, guid: 65d6643467bc845639fcee8936c9fc7f, type: 3}
+    correctAnswer: babi
+  - questionSound: {fileID: 8300000, guid: 122985cff5f1b420388e7efe7ba5a5fe, type: 3}
+    correctAnswer: ayam
   questionAudioSource: {fileID: 270277559}
   correctSound: {fileID: 2026062461}
   wrongSound: {fileID: 1280475313}
@@ -2021,7 +2025,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 270277558}
         m_TargetAssemblyTypeName: Farm, Assembly-CSharp
-        m_MethodName: Home
+        m_MethodName: LoadHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

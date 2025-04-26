@@ -392,8 +392,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1768632238}
-        m_TargetAssemblyTypeName: pilihLatar, Assembly-CSharp
-        m_MethodName: home
+        m_TargetAssemblyTypeName: PilihLatar, Assembly-CSharp
+        m_MethodName: LoadHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1097,8 +1097,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1768632238}
-        m_TargetAssemblyTypeName: pilihLatar, Assembly-CSharp
-        m_MethodName: credit
+        m_TargetAssemblyTypeName: PilihLatar, Assembly-CSharp
+        m_MethodName: LoadCredit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1265,8 +1265,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1768632238}
-        m_TargetAssemblyTypeName: pilihLatar, Assembly-CSharp
-        m_MethodName: savana
+        m_TargetAssemblyTypeName: PilihLatar, Assembly-CSharp
+        m_MethodName: LoadSavana
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1972,8 +1972,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1768632238}
-        m_TargetAssemblyTypeName: pilihLatar, Assembly-CSharp
-        m_MethodName: swamp
+        m_TargetAssemblyTypeName: PilihLatar, Assembly-CSharp
+        m_MethodName: LoadSwamp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2139,8 +2139,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1768632238}
-        m_TargetAssemblyTypeName: pilihLatar, Assembly-CSharp
-        m_MethodName: farm
+        m_TargetAssemblyTypeName: PilihLatar, Assembly-CSharp
+        m_MethodName: LoadFarm
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -1374,6 +1374,10 @@ MonoBehaviour:
   questions:
   - questionSound: {fileID: 8300000, guid: cddcecf929a5eb34b861999282b4be72, type: 3}
     correctAnswer: ular
+  - questionSound: {fileID: 8300000, guid: c0de3658b58c7422296ef24b97593394, type: 3}
+    correctAnswer: katak
+  - questionSound: {fileID: 8300000, guid: 1bbb5bbbe46374663980f791b7f2d004, type: 3}
+    correctAnswer: bebek
   questionAudioSource: {fileID: 1029480808}
   correctSound: {fileID: 4413842}
   wrongSound: {fileID: 1618618029}
@@ -2426,7 +2430,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1029480807}
         m_TargetAssemblyTypeName: Swamp, Assembly-CSharp
-        m_MethodName: Home
+        m_MethodName: LoadHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

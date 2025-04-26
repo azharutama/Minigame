@@ -3,36 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class pilihLatar : MonoBehaviour
+public class PilihLatar : MonoBehaviour
 {
-    public void savana()
+    public void LoadSavana()
     {
         StartCoroutine(LoadSceneWithDelay("savana"));
     }
 
-    public void farm()
+    public void LoadFarm()
     {
         StartCoroutine(LoadSceneWithDelay("farm"));
     }
 
-    public void swamp()
+    public void LoadSwamp()
     {
         StartCoroutine(LoadSceneWithDelay("swamp"));
     }
 
-    public void credit()
+    public void LoadCredit()
     {
         StartCoroutine(LoadSceneWithDelay("credit"));
     }
 
-    public void home()
+    public void LoadHome()
     {
         StartCoroutine(LoadSceneWithDelay("MainMenu"));
     }
 
     IEnumerator LoadSceneWithDelay(string sceneName)
     {
-        yield return new WaitForSeconds(0.2f); 
+        yield return new WaitForSeconds(0.2f);
         SceneManager.LoadScene(sceneName);
     }
 }
