@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -544, y: 249}
-  m_SizeDelta: {x: 93.3727, y: 67.3113}
+  m_AnchoredPosition: {x: -945, y: 491}
+  m_SizeDelta: {x: 171.0517, y: 123.3093}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &265217356
 MonoBehaviour:
@@ -206,7 +206,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1958443057}
-        m_TargetAssemblyTypeName: PilihLatar, Assembly-CSharp
+        m_TargetAssemblyTypeName: Credit, Assembly-CSharp
         m_MethodName: LoadHome
         m_Mode: 1
         m_Arguments:
@@ -301,8 +301,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: -10}
-  m_SizeDelta: {x: 1292.607, y: 730.1627}
+  m_AnchoredPosition: {x: 36.9777, y: 25.277}
+  m_SizeDelta: {x: 2453.9136, y: 1386.1569}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1269507588
 MonoBehaviour:
@@ -508,8 +508,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27, y: -10}
-  m_SizeDelta: {x: 1403.205, y: 787.9595}
+  m_AnchoredPosition: {x: 36.978, y: 0.000015259}
+  m_SizeDelta: {x: 2827.1226, y: 1587.5497}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1473541764
 MonoBehaviour:
@@ -899,7 +899,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1958443055}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9508d20986d28074f9df2648fff7551d, type: 3}
+  m_Script: {fileID: 11500000, guid: d44d15765ebaf4920b84b1cc2c4b9735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1958443058

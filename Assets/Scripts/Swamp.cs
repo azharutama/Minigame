@@ -11,6 +11,7 @@ public class Swamp : MonoBehaviour
     {
         public AudioClip questionSound;
         public string correctAnswer;
+        public bool isAnswered = false;
     }
 
     public List<Question> questions;
@@ -62,6 +63,9 @@ public class Swamp : MonoBehaviour
 
     public void Answer(string selectedAnswer)
     {
+
+        if (currentQuestion.isAnswered) return;
+
         questionAudioSource.Stop();
 
         if (selectedAnswer == currentQuestion.correctAnswer)
@@ -69,6 +73,7 @@ public class Swamp : MonoBehaviour
             correctSound.Play();
             questionIndex++;
             StartCoroutine(NextQuestionWithDelay(1.5f));
+            currentQuestion.isAnswered = true;
         }
         else
         {
@@ -97,7 +102,7 @@ public class Swamp : MonoBehaviour
     public void LoadHome()
     {
 
-        SceneManager.LoadScene("PilihLatar");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void LoadSavana()

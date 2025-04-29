@@ -5,17 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
-    public void PilihLatar()
-    {
-        StartCoroutine(LoadSceneWithDelay("PilihLatar"));
-    }
-    public void Farm ()
+    public void Farm()
     {
         StartCoroutine(LoadSceneWithDelay("farm"));
     }
 
-     public void Credit()
+    public void Credit()
     {
         StartCoroutine(LoadSceneWithDelay("credit"));
     }

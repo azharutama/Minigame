@@ -11,6 +11,7 @@ public class Savana : MonoBehaviour
     {
         public AudioClip questionSound;
         public string correctAnswer;
+        public bool isAnswered;
     }
 
     public List<Question> questions;
@@ -60,6 +61,8 @@ public class Savana : MonoBehaviour
 
     public void Answer(string selectedAnswer)
     {
+        if (currentQuestion.isAnswered) return;
+
         questionAudioSource.Stop();
 
         if (selectedAnswer == currentQuestion.correctAnswer)
@@ -67,6 +70,7 @@ public class Savana : MonoBehaviour
             correctSound.Play();
             questionIndex++;
             StartCoroutine(NextQuestionWithDelay(1.5f));
+            currentQuestion.isAnswered = true;
         }
         else
         {
