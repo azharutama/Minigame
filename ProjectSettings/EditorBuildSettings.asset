@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 92c63779cd6480947bf5f487f9b63fef
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/pilihLatar.unity
     guid: fd24fccda200b6f4abee08b3595eea19
   - enabled: 1
