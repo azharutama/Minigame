@@ -670,7 +670,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 240409339}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: Farm
+        m_MethodName: Credit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
